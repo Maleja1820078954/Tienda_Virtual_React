@@ -1,0 +1,119 @@
+.producto-card {
+  background: white; 
+  border: 1px solid #f8d7e9; 
+  border-radius: 8px; 
+  padding: 15px; 
+  text-align: left; 
+  transition: transform 0.3s ease; 
+  font-family: 'Poppins', sans-serif;
+  max-width: 300px;      
+  margin: 0 auto;        
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.producto-card img {
+  width: 100%; 
+  height: 200px;
+  object-fit: contain; 
+  margin-bottom: 10px;
+}
+
+.producto-card h3 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  height: 40px; 
+  overflow: hidden; 
+}
+
+.producto-card .categoria {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.producto-card .descripcion {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 10px 0 5px;
+  text-align: left;
+  height: 60px;
+  overflow: hidden;
+}
+
+.producto-card .precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff6f00;
+  margin-top: 5px;
+}
+
+.producto-card .valoracion {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.producto-card:hover {
+  transform: scale(1.05); 
+}
+
+.valoracion-carrito {
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;  
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.valoracion {
+  font-size: 0.9rem;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-agregar-carrito {
+  background: transparent;  
+  color: #000;              
+  border: none;          
+  cursor: pointer;
+  font-size: 2.2rem;         
+  border-radius: 6px;       
+  padding: 5px 8px;          
+  transition: all 0.2s ease;
+}
+
+.btn-agregar-carrito:hover {
+  transform: scale(1.2);    
+  color: #ff4fa7;           
+}
+
+.btn-agregar-carrito:active {
+  background: #ff4fa7;       
+  color: #fff;              
+  transform: scale(1);      
+}
+
+
+@media (max-width: 600px) {
+  .producto-card {
+    max-width: 95vw;
+    padding: 10px;
+    height: auto;
+  }
+  .producto-card img {
+    height: 140px;
+  }
+  .producto-card h3 {
+    font-size: 1rem;
+  }
+  .producto-card .descripcion {
+    font-size: 0.9rem;
+  }
+  .btn-agregar-carrito {
+    font-size: 1.2rem;
+    padding: 4px 6px;
+  }
+}

@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Julius+Sans+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rampart+One&family=Reenie+Beanie&family=Rubik+Doodle+Shadow&family=Shadows+Into+Light&family=Special+Elite&display=swap');
+
+
+/* Contenedor principal de la página del carrito */
+.cart-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  background-color: #f8f0f5; /* Fondo rosa pálido */
+  min-height: 80vh;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(214, 51, 132, 0.1);
+  padding: 30px;
+}
+
+.cart-container h2 {
+  color: #d63384;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.empty-cart-message {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.empty-cart-message p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-button {
+  background-color: #d63384;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-button:hover {
+  background-color: #b32a6e;
+}
+
+.cart-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+/* --- Estilos de los items del carrito --- */
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  border: 1px solid #f0e1e9;
+  border-radius: 10px;
+  background-color: #fafafa;
+  transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(214, 51, 132, 0.1);
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.item-details h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+.item-price, .item-quantity {
+  font-size: 1rem;
+  color: #666;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  color: #d63384;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.remove-button:hover {
+  color: #a3225e;
+}
+
+/* --- Estilos del resumen del carrito --- */
+.cart-summary {
+  background-color: #fdfdfd;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #f0e1e9;
+}
+
+.cart-summary h3 {
+  font-size: 1.5rem;
+  color: #333;
+  border-bottom: 2px solid #d63384;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.summary-details p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.summary-details p span {
+  font-weight: bold;
+  color: #d63384;
+}
+
+.summary-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.checkout-button, .clear-cart-button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-button {
+  background-color: #d63384;
+  color: #fff;
+}
+
+.checkout-button:hover {
+  background-color: #b32a6e;
+}
+
+.clear-cart-button {
+  background-color: #fff;
+  color: #d63384;
+  border: 2px solid #d63384;
+}
+
+.clear-cart-button:hover {
+  background-color: #f0e1e9;
+}
+
+
+.summary-actions .cta-button {
+  text-align: center;
+  margin-top: 15px; /* Ajusta el espacio entre los botones */
+  background-color: #d63384;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.summary-actions .cta-button:hover {
+  background-color: #b32a6e;
+}
+/* --- Media Queries para responsividad --- */
+@media (max-width: 768px) {
+  .cart-content {
+    grid-template-columns: 1fr;
+  }
+}

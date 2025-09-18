@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===== Sección Nosotros (cards) ===== */
+.nosotros-section {
+  background-color: #fdf2f8; 
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 100px;
+}
+
+.nosotros-section h2 {
+  color: #d63384; 
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.nosotros-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; 
+}
+
+.nosotros-card {
+  background: #fdfdfd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(214, 51, 132, 0.4);
+  flex-basis: 300px; 
+  text-align: center;
+}
+
+.nosotros-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.nosotros-card .icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.nosotros-card h3 {
+  color: #d63384;
+  margin-bottom: 15px;
+}
+
+.nosotros-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== Sección Historia ===== */
+.historia-section {
+  background-color: #fdf2f8;
+  padding: 60px 20px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.historia-section h2 {
+  color: #d63384;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.historia-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* ===== Sección Testimonios ===== */
+.testimonios-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.testimonios-section h2 {
+  color: #d63384;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.testimonios-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.testimonio-card {
+  background-color: #f8e1ec;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.testimonio-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonio-card p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.testimonio-card span {
+  font-weight: 600;
+  color: #d63384;
+  display: block;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 600px) {
+  .nosotros-section h2, .historia-section h2, .testimonios-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .nosotros-section, .historia-section, .testimonios-section {
+    padding: 30px 10px;
+  }
+
+  .nosotros-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nosotros-card {
+    flex-basis: 100%; 
+  }
+
+  .testimonios-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .testimonio-card {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+}

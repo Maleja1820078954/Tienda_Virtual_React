@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.section {
+  background-image: url("img/mesita.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh; 
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px; 
+  font-family: 'Poppins', sans-serif;
+  color: white; 
+  border-radius: 1px;
+  margin-top: 100px;
+}
+
+.section-content {
+  max-width: 700px;
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.section p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  line-height: 1.5;
+  color: black;
+}
+
+
+.ver-mas-btn {
+  display: inline-block;     
+  margin: 30px 0 0;          
+  padding: 10px 30px;
+  background: #d63384;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+  margin: 30px 0 0px; 
+}
+
+.faq-section {
+  background: #faf0f4;
+  padding: 40px 20px;
+  margin-top: 40px;
+  margin-bottom: 60px; 
+  border-radius: 12px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-section h2 {
+  color: #d63384;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.faq-list {
+  display: grid;
+  gap: 25px;
+}
+
+.faq-item h4 {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.faq-item p {
+  color: #555;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.productos,
+.productos-home {
+  text-align: center;
+  margin-top: 40px; 
+  font-family: 'Poppins', sans-serif;
+}
+
+.productos-home h2 {
+  color: #d63384;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 600px) {
+  /* Banner principal */
+   .productos-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 0 10px; 
+  }
+  .section {
+    width: 100vw;
+    height: auto;
+    min-height: 400px; 
+    padding: 20px; 
+    border-radius: 0;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+  }
+
+  .section-content {
+    max-width: 100%; 
+    padding: 15px; 
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 10px;
+  }
+
+  .section h2 {
+    font-size: 1.5rem; 
+    color: #333; 
+  }
+
+  .section p {
+    font-size: 1rem;
+    color: #555; 
+  }
+
+  .faq-section {
+    padding: 20px 5px;
+    max-width: 100vw;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 0;
+  }
+
+  .faq-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+
+  .faq-item h4 {
+    font-size: 1rem;
+  }
+
+  .faq-item p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Julius+Sans+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rampart+One&family=Reenie+Beanie&family=Rubik+Doodle+Shadow&family=Shadows+Into+Light&family=Special+Elite&display=swap');
+
+.why-us {
+  background: #fff; 
+  padding: 20px 20px 20px 20px; 
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.why-us h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #d63384; 
+  margin-bottom: 30px; 
+}
+
+.why-us-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.why-us .card {
+  background: #fdfdfd;
+  border: 1px solid #fdfdfd;;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(214, 51, 132, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-us .card:hover {
+  transform: translateY(-5px);
+}
+
+.why-us .card h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.why-us .card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .why-us {
+    padding: 20px 5px 10px 5px;
+  }
+  .why-us h2 {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+  .why-us-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .why-us .card {
+    padding: 12px;
+  }
+  .why-us .card h3 {
+    font-size: 1rem;
+  }
+  .why-us .card p {
+    font-size: 0.9rem;
+  }
+}

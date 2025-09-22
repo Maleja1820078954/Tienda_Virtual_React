@@ -121,32 +121,78 @@
 }
 
 
+/* Media Query para tabletas y pantallas más grandes (992px) */
+@media (max-width: 992px) {
+  /* Títulos de sección */
+  .nosotros-section h2,
+  .historia-section h2,
+  .testimonios-section h2 {
+    font-size: 2rem; 
+    margin-bottom: 30px;
+  }
+
+  /* Sección de "Nosotros" (cards) */
+  .nosotros-cards {
+    gap: 20px; 
+  }
+
+  .nosotros-card {
+    flex-basis: 250px; 
+  }
+
+  /* Sección de "Nuestra Historia" */
+  .historia-section p {
+    font-size: 0.95rem;
+  }
+
+  /* Sección de Testimonios */
+  .testimonios-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 15px; 
+  }
+}
+
+/* Media Query para móviles (600px) */
 @media (max-width: 600px) {
-  .nosotros-section h2, .historia-section h2, .testimonios-section h2 {
+  /* Títulos de sección */
+  .nosotros-section h2,
+  .historia-section h2,
+  .testimonios-section h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
   }
 
-  .nosotros-section, .historia-section, .testimonios-section {
-    padding: 30px 10px;
+  /* Secciones principales */
+  .nosotros-section,
+  .historia-section,
+  .testimonios-section {
+    padding: 30px 10px; 
   }
 
+  /* Cards de "Nosotros" */
   .nosotros-cards {
-    flex-direction: column;
+    flex-direction: column; 
     gap: 15px;
   }
 
   .nosotros-card {
-    flex-basis: 100%; 
+    flex-basis: 100%;
+    padding: 15px;
   }
 
+  /* Sección de "Nuestra Historia" */
+  .historia-section p {
+    font-size: 0.9rem;
+  }
+
+  /* Testimonios */
   .testimonios-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; 
     gap: 15px;
   }
-
+  
   .testimonio-card {
-    padding: 15px;
+    padding: 20px;
     font-size: 0.9rem;
   }
 }

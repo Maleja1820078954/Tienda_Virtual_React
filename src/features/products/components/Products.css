@@ -38,23 +38,33 @@
   margin-bottom: 30px; 
 }
 
+@media (max-width: 992px) {
+  .productos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+}
 
+/* Estilos para pantallas móviles */
 @media (max-width: 600px) {
   .productos {
-    padding: 20px 10px; 
-    margin-top: 80px; 
+    padding: 20px 10px;
   }
 
   .productos h2 {
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
     margin-top: 40px;
-    margin-bottom: 20px;
   }
 
   .productos-grid {
-    grid-template-columns: 1fr; 
-    gap: 15px; 
-    max-width: 100%; 
-    padding: 0 10px; 
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 400px) {
+  .productos-grid {
+    gap: 10px;
   }
 }

@@ -9,7 +9,7 @@ const useProducts = () => {
     const fetchProducts = async () => {
       try {
         // La URL ahora es local, el proxy la redirigirá a la API
-        const response = await fetch('/api/products'); 
+        const response = await fetch('https://fakestoreapi.com/products'); 
         if (!response.ok) {
           throw new Error('Error al obtener los productos');
         }

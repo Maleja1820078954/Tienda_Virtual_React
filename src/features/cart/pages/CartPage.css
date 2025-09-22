@@ -5,10 +5,10 @@
 .cart-page-wrapper {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 40px 20px;
-  background-color: #f8f0f5; /* Fondo rosa pálido */
-  min-height: 80vh;
+  background-color: #fce8f2; 
+  min-height: 100vh;
 }
 
 .cart-container {
@@ -24,7 +24,7 @@
 
 .cart-container h2 {
   color: #d63384;
-  font-size: 2.2rem;
+  font-size: 3rem;
   text-align: center;
   margin-bottom: 25px;
   font-family: 'Poppins', sans-serif;
@@ -36,7 +36,7 @@
 }
 
 .empty-cart-message p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #555;
   margin-bottom: 20px;
   font-family: 'Poppins', sans-serif;
@@ -191,7 +191,7 @@
 
 .summary-actions .cta-button {
   text-align: center;
-  margin-top: 15px; /* Ajusta el espacio entre los botones */
+  margin-top: 15px; 
   background-color: #d63384;
   color: #fff;
   padding: 12px 25px;

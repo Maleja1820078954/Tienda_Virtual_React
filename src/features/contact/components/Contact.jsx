@@ -1,31 +1,50 @@
-import React, { useState } from "react"; 
+import React, { useState, useRef } from 'react';
 import { Link } from "react-router-dom";
+import emailjs from '@emailjs/browser';
 import "./Contact.css";
 
 function Contact() {
-  // 1. Define el estado inicial para cada campo del formulario
+  const form = useRef();
+
+  // 1. Usar el estado de React para controlar los valores de los inputs
   const [formData, setFormData] = useState({
-    nombre: "",
-    correo: "",
-    asunto: "",
-    mensaje: "",
+    nombre: '',
+    correo: '',
+    asunto: '',
+    mensaje: '',
   });
 
-  // 2. Maneja los cambios en los inputs
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  // 3. Maneja el envío del formulario
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault(); // Evita que la página se recargue
 
-    // Aquí iría el código para enviar los datos al backend
-    console.log("Datos del formulario a enviar:", formData);
+    emailjs
+      .sendForm('service_69d3pxb', 'template_qlb4gcb', form.current, {
+        publicKey: 'iPEFzdN5ODaWQ4o3C',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          // 2. Limpiar los campos después de un envío exitoso
+          setFormData({
+            nombre: '',
+            correo: '',
+            asunto: '',
+            mensaje: '',
+          });
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+  
+  // 3. Crear una función para manejar los cambios en los inputs
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
   return (
@@ -36,48 +55,46 @@ function Contact() {
           ¿Tienes alguna duda o sugerencia? Estamos aquí para ayudarte. Escríbenos
           y te responderemos a la brevedad.
         </p>
-
-        {/* 4. Asocia las funciones al formulario y los inputs */}
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={sendEmail} className="field">
           <h3>Envíanos un mensaje</h3>
+          {/* 4. Usar la función de cambio en cada input */}
           <input 
             type="text" 
             placeholder="Nombre" 
-            name="nombre" // ¡Importante! Añade el atributo 'name'
-            value={formData.nombre}
-            onChange={handleChange}
+            name="nombre" 
+            value={formData.nombre} 
+            onChange={handleInputChange} 
             required 
           />
           <input 
             type="email" 
             placeholder="Correo electrónico" 
-            name="correo" // ¡Importante! Añade el atributo 'name'
-            value={formData.correo}
-            onChange={handleChange}
+            name="correo" 
+            value={formData.correo} 
+            onChange={handleInputChange} 
             required 
           />
           <input 
             type="text" 
             placeholder="Asunto" 
-            name="asunto" // ¡Importante! Añade el atributo 'name'
-            value={formData.asunto}
-            onChange={handleChange}
+            name="asunto" 
+            value={formData.asunto} 
+            onChange={handleInputChange} 
             required 
           />
           <textarea 
             placeholder="Mensaje" 
-            name="mensaje" // ¡Importante! Añade el atributo 'name'
-            value={formData.mensaje}
-            onChange={handleChange}
+            name="mensaje" 
+            value={formData.mensaje} 
+            onChange={handleInputChange} 
             required
-          ></textarea>
+          />
           <button type="submit">Enviar</button>
         </form>
-
         <Link to="/" className="back-button">⬅ Volver al inicio</Link>
       </div>
     </div>
   );
-}
+};
 
 export default Contact;

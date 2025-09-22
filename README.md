@@ -1,43 +1,67 @@
 # Tienda Virtual - Proyecto de ADSO
 
-Este es el proyecto final para el curso de ADSO en el SENA. Es una tienda virtual que utiliza una API pública para mostrar productos, con un diseño adaptable a diferentes dispositivos. La aplicación cuenta con una arquitectura organizada en funcionalidades, lo que permite un desarrollo y mantenimiento modular.
+Este es el proyecto final del curso de **Análisis y Desarrollo de Software (ADSO)** en el SENA. Se trata de una **tienda virtual** desarrollada con React, que consume una API pública para gestionar un catálogo de productos. El proyecto está diseñado con una arquitectura modular y un enfoque en la experiencia de usuario, ofreciendo un **diseño responsive** que se adapta a cualquier dispositivo.
 
 ---
 
 ## 💻 Tecnologías Utilizadas
 
-- **Frontend:** React (Vite)
-- **Estilos:** CSS
-- **API:** https://fakestoreapi.com/products
+-   **Frontend:** React con Vite
+-   **Estilos:** CSS
+-   **API Pública:** [Fake Store API](https://fakestoreapi.com/products) para la gestión de productos.
+
 
 ---
 
-## ✨ Funcionalidades
+## ✨ Funcionalidades y Entregables
 
-- **Seis vistas principales:** El proyecto incluye las siguientes funcionalidades completas:
-  - **Inicio:** Página principal de la tienda.
-  - **Productos:** Muestra el catálogo de productos de la API.
-  - **Búsqueda de productos:** Funcionalidad para buscar productos específicos.
-  - **Carrito:** Permite agregar y gestionar los productos para la compra.
-  - **Nosotros:** Sección informativa sobre la tienda.
-  - **Contacto:** Página de contacto diseñada con CSS, sin funcionalidad de envío.
-- **Componentes modulares:** La aplicación se organiza con componentes reutilizables como el `Header` y el `Footer`, que se encuentran en todas las páginas.
-- **Manejo de estados:** Muestra un mensaje de "Cargando productos..." mientras se realiza la consulta y un mensaje de error claro si la API falla.
-- **Navegación funcional:** La navegación entre las vistas es fluida.
-- **Diseño responsive:** La interfaz se adapta correctamente a vistas de escritorio y dispositivos móviles, lograda con CSS puro.
-- **Estructura de carpetas:** El proyecto sigue una estructura organizada por funcionalidades (`features`), tal como se solicitó en la entrega.
+La aplicación está organizada en una serie de vistas y componentes que cumplen con los requisitos del proyecto, garantizando una experiencia de navegación fluida.
+
+### Vistas Principales
+
+-   **Inicio:** La página de bienvenida de la tienda.
+-   **Productos:** Muestra el catálogo completo de productos obtenidos de la API.
+-   **Búsqueda de Productos:** Permite a los usuarios filtrar productos por nombre o descripción.
+-   **Carrito de Compras:** Funcionalidad para agregar, visualizar y gestionar los productos seleccionados antes de la compra.
+-   **Nosotros:** Sección informativa sobre la tienda y el proyecto.
+-   **Contacto:** Una página de contacto diseñada con CSS, preparada para futuras integraciones.
+
+### Manejo de la Interfaz
+
+-   **Estados Visibles:** La aplicación muestra mensajes claros de estado para el usuario:
+    -   `"Cargando productos..."` mientras se realiza la consulta a la API.
+    -   Un **mensaje de error claro** si la solicitud a la API falla.
+-   **Componentes Reutilizables:** Se utilizan componentes modulares como `Header` y `Footer` para una arquitectura escalable y de fácil mantenimiento.
+-   **Navegación Fluida:** La navegación entre las vistas es funcional y directa, permitiendo al usuario moverse sin problemas por la tienda.
+-   **Diseño Responsive:** La interfaz se adapta perfectamente tanto a **dispositivos móviles como de escritorio** gracias al uso de CSS.
 
 ---
 
 ## 🚀 Pasos para la Ejecución del Proyecto
 
-Para clonar y ejecutar este proyecto en tu entorno local, sigue los siguientes pasos:
+Para clonar y ejecutar este proyecto en tu entorno local, sigue los siguientes pasos.
 
-### 1. Clonar el repositorio, 2. Instalar dependencias y 3. Iniciar la aplicación en la terminal de VS de Command Prompt
+1.  **Clonar el Repositorio**
+    Abre tu terminal y ejecuta el siguiente comando para descargar el proyecto:
+    ```bash
+    git clone [https://github.com/Maleja1820078954/Tienda_Virtual_React.git](https://github.com/Maleja1820078954/Tienda_Virtual_React.git)
+    ```
 
-Abre tu terminal y ejecuta el siguiente comando:
+2.  **Instalar Dependencias**
+    Navega al directorio del proyecto e instala todas las dependencias necesarias:
+    ```bash
+    cd Tienda_Virtual_React
+    npm install
+    ```
 
-```bash
-git clone [https://github.com/Maleja1820078954/Tienda_Virtual_React.git](https://github.com/Maleja1820078954/Tienda_Virtual_React.git)
+3.  **Iniciar la Aplicación**
+    Ejecuta el siguiente comando para iniciar el servidor de desarrollo y ver el proyecto en tu navegador:
+    ```bash
+    npm run dev
+    ```
 
+---
 
+## 📄 Repositorio
+
+-   **Enlace al Repositorio:** `https://github.com/Maleja1820078954/Tienda_Virtual_React.git`
